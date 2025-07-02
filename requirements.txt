@@ -1,0 +1,24 @@
+# Core
+torch==1.13.1
+torchvision==0.14.1
+numpy==1.24.3
+matplotlib
+Pillow
+requests
+
+# Optional extras
+scipy==1.10.1
+tqdm==4.65.0
+future==0.18.3
+PyYAML==6.0.1
+
+# LPIPS & FID
+lpips==0.1.4
+pytorch-fid==0.2.0
+
+# Lightning (older version to match your 1.4.5 usage)
+pytorch-lightning==1.4.5
+
+# TensorFlow with compatible deps
+tensorflow==2.13.1
+typing-extensions==4.5.0
