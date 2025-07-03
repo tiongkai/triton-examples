@@ -1,0 +1,25 @@
+name: "yoloseg-onnx"
+platform: "onnxruntime_onnx"
+max_batch_size: 1
+
+input [
+  {
+    name: "images"
+    data_type: TYPE_FP32
+    format: FORMAT_NCHW
+    dims: [3, -1, -1]  # Dynamic H and W
+  }
+]
+
+output [
+  {
+    name: "output0"
+    data_type: TYPE_FP32
+    dims: [116, -1]  # Dynamic number of predictions (depends on input size)
+  },
+  {
+    name: "output1"
+    data_type: TYPE_FP32
+    dims: [32, -1, -1]  # Dynamic H and W (downsampled from input)
+  }
+]
